@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: black;
+            color: wheat;
+        }
+        .main{
+            position: absolute;
+            left: 50%;
+            top:50% ;
+            transform: translate(-50%,-50%);
+        }
+        .slider{
+            -webkit-appearance: none;
+            appearance: none;
+            width: 650px;
+            height: 25px;
+            background: #303030;
+            outline: none;
+            transition: all 0.4s;
+        }
+        .slider::-webkit-slider-thumb{
+            -webkit-appearance: none;
+            width: 250px;
+            height: 35px;
+            background: #f58634;
+            cursor: pointer;
+        }
+        .slider:hover{
+            background: #303030;
+
+        }
+        #op{
+            font-size: 2.5rem;
+            margin: 20px 0 0 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <input type="range" min="0" max="100" value="0" class="slider" id="range" name="" id="">
+        <div id="op"></div>
+    </div>
+    <script>
+         var range =document.getElementById('range')
+         var output =document.getElementById('op')
+         output.innerHTML=range.value
+
+         range.oninput=function(){
+             output.innerHTML =this.value
+         }
+    </script>
+</body>
+</html>

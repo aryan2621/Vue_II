@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue"></script>
+
+</head>
+<body>
+<div id="vue-app-one">
+    <!-- {{title}}
+    {{greet}}
+    <greeting></greeting> -->
+    <h2>Refs</h2>
+    <input type="text" ref="input">
+    <button v-on:click="readrefs">Submit</button>
+    <p>yor fav :{{output}}</p>
+    <div ref="test">hello</div>
+</div>
+<div id="vue-app-two">
+    {{title}}
+    {{greet}}
+    
+    <greeting></greeting>
+
+
+
+<button v-on:click="changeTitle">Change app one title</button>
+</div>
+<script src="./js/new.js"></script>
+</body>
+</html>

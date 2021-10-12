@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        background-color: black;
+        color: wheat;
+    }
+    .main{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+    }
+    #text{
+        font-size: 2rem;
+    }
+    .line{
+        animation: anim 0.5s infinite linear;
+    }
+    @keyframes anim{
+        0%,100%{
+            opacity: 1;
+        }
+        50%{
+            opacity: 0;
+        }
+    }
+</style>
+<body>
+    <div class="main">
+        <span id="text"></span>
+        <span class="line"></span>
+    </div>
+    <script>
+        var i=0
+        var text = 'Rishabh Verma is a very good Boy'
+        type();
+        function type(){
+            if(i<text.length){
+                document.getElementById('text').innerHTML +=text.charAt(i)
+                i++
+                setTimeout(type,100)
+            }
+        }
+    </script>
+</body>
+</html>
